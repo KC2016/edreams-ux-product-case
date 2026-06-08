@@ -29,6 +29,8 @@ The Issue: On the baggage selection screen, an important promotional banner high
 
 UX Impact: The interface fails to support dynamic/responsive system fonts (a setting heavily used by visually impaired users who increase text size on their operating systems). Because the text collapsed, the layout overlapped, rendering the promotional messaging unreadable.
 
+![Dynamic Font Accessibility Bug](images/font.jpeg)
+
 #### C. Inconsistent "Desglose del Precio" (Price Breakdown) Behavior
 
 🟠 **UX Inconsistency**
@@ -36,6 +38,8 @@ UX Impact: The interface fails to support dynamic/responsive system fonts (a set
 The Issue: The price breakdown tool works flawlessly and transparently across most stages of the funnel. However, it completely breaks on the specific screen offering refundable tickets. Clicking "Desglose" on this screen fails to isolate the cost of the insurance and only displays the consolidated total price.
 
 UX Impact: Technical inconsistency at a critical touchpoint. Hiding the exact financial breakdown during a high-value cross-selling stage triggers user defense mechanisms, making customers reject the service out of fear of hidden fees.
+
+![Price Breakdown Bug Screen](images/desglose.jpeg)
 
 #### D. Static and Linear Seat Pricing
 
@@ -89,3 +93,4 @@ Focus Area 3 (Risk Mitigation): Integrating international postal APIs (like Loqa
 
 ### Conclusion
 This multi-stage roadmap demonstrates the evolution of a product mindset: beginning with an empathetic User UX Audit (Stage 1), transitioning into Data-Driven Metrics (Stage 2), and culminating in Business & Revenue Optimization (Stage 3).
+
