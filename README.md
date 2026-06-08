@@ -17,9 +17,9 @@ To demonstrate a structured, iterative product methodology, this repository is o
 
 🔴 **High Friction**
 
-The Issue: The platform rigidly forces the interface language based on the user's detected IP address or chosen country (e.g., forcing Spanish if the user is in Spain). Additionally, the system aggressively requests location permissions and displays mismatching default currencies (e.g., Pounds instead of Euros) with no intuitive way to manually override language or currency settings.
+The Issue: While the platform allows users to select their preferred country market (storefront), it creates an inflexible, forced bundle between the selected country, its official language, and its local currency. For instance, if a user manually selects Germany as their market, the system automatically forces the interface into German and the currency into Euros, without offering an independent setting to change the display language back to English or any other preferred language.
 
-UX Impact: This creates a severe barrier for expatriates and digital nomads who reside in a country but do not speak the local language. It also alienates privacy-conscious users who prefer not to share their exact location.
+UX Impact: This creates a severe barrier for expatriates and digital nomads who reside in a country but do not speak the local language. By strictly pairing the storefront market with a single language, the platform forces non-native speakers to navigate complex booking and legal terms in a foreign language or rely on inaccurate browser translations, disrupting an otherwise smooth checkout funnel.
 
 #### B. Dynamic Font Layout Break (Accessibility Bug)
 
