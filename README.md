@@ -17,7 +17,7 @@ To demonstrate a structured, iterative product methodology, this repository is o
 
 🔴 **High Friction**
 
-The Issue: The platform rigidly forces the interface language based on the user's detected IP address (e.g., forcing Spanish if the user is in Spain). Additionally, the system aggressively requests location permissions and displays mismatching default currencies (e.g., Pounds instead of Euros) with no intuitive way to manually override language or currency settings.
+The Issue: The platform rigidly forces the interface language based on the user's detected IP address or chosen country (e.g., forcing Spanish if the user is in Spain). Additionally, the system aggressively requests location permissions and displays mismatching default currencies (e.g., Pounds instead of Euros) with no intuitive way to manually override language or currency settings.
 
 UX Impact: This creates a severe barrier for expatriates and digital nomads who reside in a country but do not speak the local language. It also alienates privacy-conscious users who prefer not to share their exact location.
 
