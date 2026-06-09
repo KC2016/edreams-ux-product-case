@@ -7,7 +7,7 @@ To demonstrate a structured, iterative product methodology, this repository is o
 
 **Stage 1 (Current Scope):** User Experience (UX) & Accessibility Audit.
 
-**Stage 2 (Future Roadmap)**:** Data-Driven Metric Mapping & Cart Abandonment Deep Dive.
+**Stage 2 (Future Roadmap):** Data-Driven Metric Mapping & Cart Abandonment Deep Dive.
 
 **Stage 3 (Future Roadmap):** Dynamic Pricing & Ancillary Revenue Optimization.
 
@@ -29,7 +29,7 @@ The Issue: On the baggage selection screen, an important promotional banner high
 
 UX Impact: The interface fails to support dynamic/responsive system fonts (a setting heavily used by visually impaired users who increase text size on their operating systems). Because the text collapsed, the layout overlapped, rendering the promotional messaging unreadable.
 
-![Dynamic Font Accessibility Bug](images/font.jpeg)
+<img src="images/font.jpeg" alt="Dynamic Font Accessibility Bug" width="300">
 
 #### C. Inconsistent "Desglose del Precio" (Price Breakdown) Behavior
 
@@ -39,7 +39,7 @@ The Issue: The price breakdown tool works flawlessly and transparently across mo
 
 UX Impact: Technical inconsistency at a critical touchpoint. Hiding the exact financial breakdown during a high-value cross-selling stage triggers user defense mechanisms, making customers reject the service out of fear of hidden fees.
 
-![Price Breakdown Bug Screen](images/desglose.jpeg)
+<img src="images/desglose.jpeg" alt="Price Breakdown Bug Screen" width="300">
 
 #### D. Static and Linear Seat Pricing
 
