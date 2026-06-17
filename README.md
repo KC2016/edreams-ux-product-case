@@ -100,6 +100,30 @@ Using `statsmodels.stats.power`, the mandatory sample thresholds calculated to a
 
 ---
 
+## 📊 Data Visualization & Product Insights
+
+### 1. E-Commerce Conversion Funnel Baseline
+To understand where users drop off during the booking journey, we mapped the end-to-end event logs:
+
+![Product Conversion Funnel](images/funnel_chart.png)
+
+* **The Passenger Details Leak (75.12% Retention):** We see an immediate **24.88% drop** right after flight selection. This maps directly to our UX audit regarding the **Lack of Transparency in Initial Pricing (Prime Model)**—users discover hidden fees early in the cart and bounce.
+* **The Baggage Barrier (49.84% Retention):** Another massive **25.28% absolute drop** occurs at baggage selection. This validates the impact of the **Baggage UI truncation bug**, where promotional incentives are lost due to broken layouts.
+* **The Seat Pricing Anomaly (35.02% Retention):** Moving from baggage to seat selection bleeds another chunk of users. This highlights the friction of charging flat premium rates for undesirable middle seats.
+* **Final Checkout Baseline (1.24% Success):** The conversion floor shows a strict operational reality, leaving an incredible margin for optimization via A/B Testing.
+
+---
+
+### 2. Cart Abandonment by Market Segment
+Analyzing behavioral friction across international geolocalizations reveals a widespread issue:
+
+![Cart Abandonment by Market](images/market_chart.png)
+
+* **Geolocalisation & Language Barriers:** High abandonment rates in core European markets—**Italy (50.07%)**, **Germany (49.87%)**, and **France (49.48%)**—strongly support our UX audit regarding **Inflexible Currency and Language locking**.
+* Forcing expatriates or non-native speakers to navigate strictly in the local IP's language directly drives this high cart abandonment pattern across all major regions.
+
+---
+
 ## 💰 Future Roadmap: Stage 3 (Dynamic Pricing & Ancillary Revenue Optimization)
 Objective: Optimize financial revenue models without hurting the core user experience.
 
