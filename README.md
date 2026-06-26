@@ -1,146 +1,108 @@
-# eDreams Product Case Study: E-Commerce Funnel & UX Analysis
+# eDreams Product Case Study: E-Commerce Funnel & UX Analysis ✈️
+
 **Executive Summary**
+This case study evaluates the end-to-end user experience (UX) and product design of the eDreams e-commerce booking funnel. The analysis was conducted through a real-time purchasing simulation, navigating from initial flight search up to checkout, translating qualitative friction points into quantitative data models to drive business optimization.
 
-This case study evaluates the end-to-end user experience (UX) and product design of the eDreams mobile and desktop e-commerce booking funnel. The analysis was conducted through a real-time purchasing simulation, navigating from the initial flight search up to the final checkout screen.
+<p align="center">
+  <img src="images/logo_app.jpeg" alt="eDreams Booking Funnel App Simulation" width="200">
+</p>
 
-To demonstrate a structured, iterative product methodology, this repository is organized into a multi-stage roadmap:
 
-**Stage 1 (Completed):** User Experience (UX) & Accessibility Audit.
+## Product Optimization Roadmap
 
-**Stage 2 (Completed):** Data-Driven Metric Mapping & Cart Abandonment Deep Dive.
+<details>
+<summary><b>👁️ Stage 1: UX & Accessibility Audit (Completed)</b></summary>
 
-**Stage 3 (Future Roadmap):** Dynamic Pricing & Ancillary Revenue Optimization.
+#### 🌐 Module 1.1: Geolocation-Locked Language & Currency Inflexibility
+* **The Issue:** The platform forces a strict bundle between the selected storefront country, its official language, and its local currency (e.g., selecting Spain forces Spanish and Euros, with no independent language toggle).
+* **UX Impact:** Severe barrier for expatriates and digital nomads, forcing non-native speakers to navigate complex checkout flows and legal terms in a foreign language.
 
-## Stage 1: UX & Accessibility Audit (Current Project)
-### 1. Friction Points & Areas for Improvement
-#### A. Geolocation-Locked Language & Currency Inflexibility
-
-🔴 **High Friction**
-
-The Issue: While the platform allows users to select their preferred country market (storefront), it creates an inflexible, forced bundle between the selected country, its official language, and its local currency. For instance, if a user manually selects Spain as their market, the system automatically forces the interface into Spanish and the currency into Euros, without offering an independent setting to change the display language back to English or any other preferred language.
-
-UX Impact: This creates a severe barrier for expatriates and digital nomads who reside in a country but do not speak the local language. By strictly pairing the storefront market with a single language, the platform forces non-native speakers to navigate complex booking and legal terms in a foreign language or rely on inaccurate browser translations, disrupting an otherwise smooth checkout funnel.
-
-#### B. Dynamic Font Layout Break (Accessibility Bug)
-
-🟠 **UI / Accessibility Bug**
-
-The Issue: On the baggage selection screen, an important promotional banner highlighted in orange ("Maletas hasta un -20% más...") suffered severe text truncation. The crucial parts of the text were completely hidden underneath the selection block.
-
-UX Impact: The interface fails to support dynamic/responsive system fonts (a setting heavily used by visually impaired users who increase text size on their operating systems). Because the text collapsed, the layout overlapped, rendering the promotional messaging unreadable.
-
+#### 🚨 Module 1.2: Dynamic Font Layout Break (Accessibility Bug)
+* **The Issue:** On the baggage selection screen, critical promotional banners suffer severe text truncation and layout collapse under custom system font scalings.
+* **UX Impact:** Breaks accessibility for visually impaired users who rely on enlarged operating system fonts, rendering promotional incentives unreadable.
 <img src="images/font.jpeg" alt="Dynamic Font Accessibility Bug" width="300">
 
-#### C. Inconsistent "Desglose del Precio" (Price Breakdown) Behavior
-
-🟠 **UX Inconsistency**
-
-The Issue: The price breakdown tool works flawlessly and transparently across most stages of the funnel. However, it completely breaks on the specific screen offering refundable tickets. Clicking "Desglose" on this screen fails to isolate the cost of the insurance and only displays the consolidated total price.
-
-UX Impact: Technical inconsistency at a critical touchpoint. Hiding the exact financial breakdown during a high-value cross-selling stage triggers user defense mechanisms, making customers reject the service out of fear of hidden fees.
-
+#### 💰 Module 1.3: Inconsistent Price Breakdown Behavior
+* **The Issue:** The price breakdown tool completely fails on the specific screen offering refundable tickets, hiding the insurance delta and showing only a consolidated total.
+* **UX Impact:** Triggers user defense mechanisms due to a lack of financial transparency at a critical cross-selling touchpoint.
 <img src="images/desglose.jpeg" alt="Price Breakdown Bug Screen" width="300">
 
-#### D. Static and Linear Seat Pricing
+#### 💰 Module 1.4: Static and Linear Seat Pricing
+* **The Issue:** The system charges a flat premium fee for any seat within the same cabin zone, ignoring whether it is a window, aisle, or middle seat.
+* **UX Impact:** Fails to leverage the higher perceived value of windows/aisles or use discounts to accelerate middle seat allocation.
 
-🟢 **Revenue Opportunity**
+#### Module 1.5: Weak Address and Postal Code Validation
+* **The Issue:** The checkout form accepts mismatched combinations (e.g., City: Barcelona / Postal Code: 53442), completely bypassing regional constraints.
+* **UX Impact:** Creates data hygiene issues and elevates operational risks for billing authorization.
 
-The Issue: The seat selection screen charges the exact same fee for middle, window, or aisle seats within the same cabin zone.
+#### Module 1.6: Core Conversion Drivers
+* **Fluid UI:** Visually pleasing interface with a non-invasive color palette that minimizes cognitive fatigue.
+* **Balanced Cross-Selling:** Add-ons do not derail or hijack the user's primary transactional intent.
+* **Route Flexibility:** Seamless mixing of independent legs across different airlines.
+* **Psychological Triggers:** Effective use of real-time low inventory indicators to drive conversion urgency.
+</details>
 
-UX Impact: Middle seats are universally perceived as the worst flight experience. A flat rate fails to respect user preferences or leverage the higher perceived value of windows and aisles.
+<details>
+<summary><b>📊 Stage 2: Data-Driven Metric Mapping & Cart Abandonment (Completed) </b></summary>
 
-#### E. Weak Address and Postal Code Validation
-
-🔵 **Operational Risk**
-
-The Issue: During the simulation, the system accepted a completely mismatched address combination (City: Barcelona / Postal Code: 53442), even though Barcelona postal codes strictly begin with "08".
-
-UX Impact: A lack of real-time address verification API integration at this stage creates data hygiene issues and risks billing failures.
-
-### 2. Conversions Drivers (What eDreams Does Well)
-Despite the friction points, the platform demonstrates several strong product design choices:
-
-Clean and Fluid UI: The overall interface is visually pleasing, leveraging a non-invasive color palette that guides the user effortlessly without causing cognitive fatigue.
-
-Balanced Cross-Selling: Although the funnel actively offers add-ons like extra baggage, travel insurance, seat selection, and refundable ticket upgrades, these cross-selling modules do not derail the user's main purchase intent.
-
-Route Flexibility: The system smoothly allows users to buy independent legs of a journey (e.g., departure with one airline, return with another), maximizing customer choice.
-
-Efficient Scarcity Triggers: Displaying the exact number of low remaining seats on a flight serves as an excellent psychological trigger to accelerate the final decision.
-
-Value-Added Features: The option to "Freeze Price" is a brilliant product feature that directly mitigates user anxiety surrounding volatile airline tariffs.
-
-### Future Roadmap: Suggestions for Upcoming Studies
-To expand this case study into an end-to-end Product Management portfolio, the following phases are mapped out for future iterations:
-
-## Stage 2: Data-Driven Metric Mapping & Cart Abandonment Deep Dive
-
-### 📌 Objective & Hypothesis
-We translated the qualitative UX friction points from Stage 1 into core e-commerce metrics using tracking logs generated in `01_data_generation.ipynb` to test the following premise:
-* **Hypothesis:** The lack of transparency in the "Prime Price" coupled with the language-locking mechanism is the primary cause of a high independent Drop-Off Rate at the cart/checkout level for international cohorts.
-
-### 📈 Metrics Implementation & Regional Drill-Down
-Instead of looking at a generic global abandonment rate, metrics were calculated independently per market segment to prevent high-volume core hubs (like Spain) from masking localized conversion drops:
-
+#### Module 2.1: Metric Formulation & Core Hypothesis
+* **Hypothesis:** Pricing opacity coupled with geolocation language-locking acts as the primary driver for high checkout drop-off rates within international cohorts.
+* **Formula:**
 $$\text{Market Abandonment Rate} = \frac{\text{Total Abandoned Checkout Sessions within Market } X}{\text{Total Checkout Sessions within Market } X} \times 100$$
 
-* Data processing inside the notebook successfully cross-tabulated `user_market` and user `status` to isolate the exact impact of language restriction on conversion.
+#### Module 2.2: A/B Testing Experiment Design (Statistical Sizing)
+* **Baseline Conversion:** 4.0%
+* **Minimum Detectable Effect (MDE):** 15% relative lift (Targeting 4.6% Conversion)
+* **Parameters:** $\alpha = 0.05$ (95% Confidence) | Power ($1-\beta$) = 0.80
+* **Sample Size Requirement:** 17,923 unique sessions per variant (**35,846 total sessions**).
 
-### 🧪 A/B Testing Experiment Design
-To validate a potential solution (implementing a decentralized "Language/Currency Select" toggle at checkout), we built a mathematical framework to size the experiment under strict statistical guardrails:
-
-* **Baseline Conversion Rate:** 4.0% (Derived from our historical production funnel log baseline).
-* **Minimum Detectable Effect (MDE):** 15% relative lift (Targeting a **4.6%** conversion rate for the variant group).
-* **Statistical Thresholds:** Alpha ($\alpha$) = 0.05 (95% Confidence Level) | Statistical Power ($1-\beta$) = 0.80.
-
-#### Sample Size Framework Results
-Using `statsmodels.stats.power`, the mandatory sample thresholds calculated to achieve statistical significance are:
-* **Required Sample Size PER VARIANT:** 17,923 unique sessions
-* **Total Minimum Traffic Required:** 35,846 unique sessions
-
----
-
-## 📊 Data Visualization & Product Insights
-
-### 1. E-Commerce Conversion Funnel Baseline
-To understand where users drop off during the booking journey, we mapped the end-to-end event logs:
+#### Module 2.3: Data Visualization & Behavioral Insights
+* **The Passenger Details Leak (75.12% Retention):** A sharp 24.88% drop occurs right after flight selection, mapping to upfront pricing opacity friction.
+* **The Baggage Barrier (49.84% Retention):** A massive 25.28% absolute drop happens at baggage selection, validating the loss of promotional incentives due to the text truncation layout bug.
+* **Regional Language Barriers:** Italy (50.07%), Germany (49.87%), and France (49.48%) display the highest cart abandonment rates, validating the friction caused by inflexible language locking.
 
 ![Product Conversion Funnel](images/funnel_chart.png)
-
-* **The Passenger Details Leak (75.12% Retention):** We see an immediate **24.88% drop** right after flight selection. This maps directly to our UX audit regarding the **Lack of Transparency in Initial Pricing (Prime Model)**—users discover hidden fees early in the cart and bounce.
-* **The Baggage Barrier (49.84% Retention):** Another massive **25.28% absolute drop** occurs at baggage selection. This validates the impact of the **Baggage UI truncation bug**, where promotional incentives are lost due to broken layouts.
-* **The Seat Pricing Anomaly (35.02% Retention):** Moving from baggage to seat selection bleeds another chunk of users. This highlights the friction of charging flat premium rates for undesirable middle seats.
-* **Final Checkout Baseline (1.24% Success):** The conversion floor shows a strict operational reality, leaving an incredible margin for optimization via A/B Testing.
-
----
-
-### 2. Cart Abandonment by Market Segment
-Analyzing behavioral friction across international geolocalizations reveals a widespread issue:
-
 ![Cart Abandonment by Market](images/market_chart.png)
+</details>
 
-* **Geolocalisation & Language Barriers:** High abandonment rates in core European markets—**Italy (50.07%)**, **Germany (49.87%)**, and **France (49.48%)**—strongly support our UX audit regarding **Inflexible Currency and Language locking**.
-* Forcing expatriates or non-native speakers to navigate strictly in the local IP's language directly drives this high cart abandonment pattern across all major regions.
+<details open>
+<summary><b> ⚡ Stage 3: Dynamic Pricing & Ancillary Revenue Optimization (Completed)</b></summary>
+
+#### Module 3.1: Accessibility & Layout Bug Financial Recovery
+* **Business Logic:** Simulates fixing the front-end layout bug. Restructuring the checkout dataset fixes baseline distortions where conversion was assumed to be 100%.
+* **Financial Model:**
+  * *Normal Layout Flow:* Establishes a **~40% conversion rate** baseline.
+  * *Bug Variant Flow:* Drop-offs cause checkout conversion to bleed down to **~35%**. Fixes directly protect top-of-funnel ad spend.
+
+#### Module 3.2: Dynamic Pricing & Ancillary Yield Optimization
+* **Business Logic:** Deploys a dynamic seat map algorithm based on real-time scarcity. Window/Aisle seats scale linearly in price with occupancy, while Middle seats discount slightly to clear bad inventory.
+* **Financial Impact:**
+  * Legacy Flat-Rate Revenue: €50,000.00
+  * Optimized Dynamic Revenue: €74,878.17
+  * **Net Revenue Lift: €+24,878.17** in pure operational margin.
+
+#### Module 3.3: Risk Mitigation & Postal API Integration
+* **Business Logic:** Integrates real-time international address verification at checkout to eliminate false-positive payment declines caused by invalid billing data.
+* **Financial Impact:**
+  * Evaluated Purchase Attempts: 1,000 sessions.
+  * Recovered Transactions: 40 checkouts successfully processed.
+  * **Revenue Leakage Blocked: €2,600.00** injected straight into the take-rate margin.
+</details>
+
+
+
+<details open>
+<summary><b>Conclusion</b></summary>
+
+This multi-stage roadmap demonstrates the evolution of a structured product mindset: beginning with an empathetic UX and accessibility audit (Stage 1), transitioning into data-driven analytical mapping (Stage 2), and culminating in pure algorithmic revenue optimization (Stage 3).
+</details>
 
 ---
 
-## 💰 Future Roadmap: Stage 3 (Dynamic Pricing & Ancillary Revenue Optimization)
-Objective: Optimize financial revenue models without hurting the core user experience.
+<details>
+<summary><b>References & Industry Benchmarks</b></summary>
 
-* **Focus Area 1 (Pricing Algorithms):** Revamping the seat map into a dynamic pricing structure (charging a premium for window/aisle demand and introducing discounts to offload middle seats faster).
-* **Focus Area 2 (Accessibility & Upselling Conversion):** Resolving the dynamic font bug identified in Stage 1 to calculate the potential recovery of Ancillary Revenue (baggage upsells) among visually impaired user demographics.
-* **Focus Area 3 (Risk Mitigation):** Integrating international postal APIs (like Loqate or Google Places) to analyze the decrease in payment-stage transaction declines.
-
----
-
-### 🎯 Conclusion
-This multi-stage roadmap demonstrates the evolution of a product mindset: beginning with an empathetic User UX Audit (Stage 1), transitioning into Data-Driven Metrics (Stage 2), and culminating in Business & Revenue Optimization (Stage 3).
-
-## References:
-### Methodology & Industry Benchmarks
-The synthetic dataset used in this analysis mimics real-world production data for the travel sector, adhering to industry performance data provided by:
-- **Conversion Rates (~4%):** Validated against *Contentsquare's Digital Experience Benchmarks*.
-- **Funnel Drop-offs (~75%):** Modeled after *SaleCycle's Airline & Travel Abandonment Reports* (accounting for price comparison behaviors and ancillary fee friction).
-- **Technical Failures (~3%):** Based on industry-standard web platform SLA error budgets (*Datadog/SRE principles*).
-
-
+* **Conversion Rates (~4%):** Validated against *Contentsquare's Digital Experience Benchmarks*.
+* **Funnel Drop-offs (~75%):** Modeled after *SaleCycle's Airline & Travel Abandonment Reports*.
+* **Technical Failures (~3%):** Based on standard web platform SLA error budgets (*Datadog/SRE principles*).
+</details>
